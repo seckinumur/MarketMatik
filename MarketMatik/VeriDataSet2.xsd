@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VeriDataSet2" targetNamespace="http://tempuri.org/VeriDataSet2.xsd" xmlns:mstns="http://tempuri.org/VeriDataSet2.xsd" xmlns="http://tempuri.org/VeriDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VeriConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VeriConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MarketMatik.Properties.Settings.GlobalReference.Default.VeriConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MusterilerTableAdapter" GeneratorDataComponentClassName="MusterilerTableAdapter" Name="Musteriler" UserDataComponentName="MusterilerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="VeriConnectionString (Settings)" DbObjectName="main.Musteriler" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [MusteriAdi] FROM [Musteriler]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MusteriAdi" DataSetColumn="MusteriAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VeriDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VeriDataSet2" msprop:Generator_UserDSName="VeriDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Musteriler" msprop:Generator_TableClassName="MusterilerDataTable" msprop:Generator_TableVarName="tableMusteriler" msprop:Generator_TablePropName="Musteriler" msprop:Generator_RowDeletingName="MusterilerRowDeleting" msprop:Generator_RowChangingName="MusterilerRowChanging" msprop:Generator_RowEvHandlerName="MusterilerRowChangeEventHandler" msprop:Generator_RowDeletedName="MusterilerRowDeleted" msprop:Generator_UserTableName="Musteriler" msprop:Generator_RowChangedName="MusterilerRowChanged" msprop:Generator_RowEvArgName="MusterilerRowChangeEvent" msprop:Generator_RowClassName="MusterilerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MusteriAdi" msprop:Generator_ColumnVarNameInTable="columnMusteriAdi" msprop:Generator_ColumnPropNameInRow="MusteriAdi" msprop:Generator_ColumnPropNameInTable="MusteriAdiColumn" msprop:Generator_UserColumnName="MusteriAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Musteriler" />
+      <xs:field xpath="mstns:MusteriAdi" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

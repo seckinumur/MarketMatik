@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VeriModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;C:\Users\secki\OneDrive\Belgeler\Visual Studio 2015\Projects\MarketMatik\MarketMatik\veritabani\Veri.s3db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="KasaAylik">
+          <Key>
+            <PropertyRef Name="KasaAylikID" />
+          </Key>
+          <Property Name="KasaAylikID" Type="integer" Nullable="false" />
+          <Property Name="Tarih" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="KasaAylikToplam" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="KasaToplam">
+          <Key>
+            <PropertyRef Name="KasaToplamID" />
+          </Key>
+          <Property Name="KasaToplamID" Type="integer" Nullable="false" />
+          <Property Name="Tarih" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Ciro" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Kar" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="GunIciToplam" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Musteriler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="MusteriAdi" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="MusteriBakiyesi" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Urunler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="BarkodNo" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="UrunAdi" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="UrunFiyati" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="UrunGelisFiyati" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="UrunSatisFiyati" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="VeriModelStoreContainer">
+          <EntitySet Name="KasaAylik" EntityType="Self.KasaAylik" store:Type="Tables" />
+          <EntitySet Name="KasaToplam" EntityType="Self.KasaToplam" store:Type="Tables" />
+          <EntitySet Name="Musteriler" EntityType="Self.Musteriler" store:Type="Tables" />
+          <EntitySet Name="Urunler" EntityType="Self.Urunler" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VeriModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KasaAylik">
+          <Key>
+            <PropertyRef Name="KasaAylikID" />
+          </Key>
+          <Property Name="KasaAylikID" Type="Int64" Nullable="false" />
+          <Property Name="Tarih" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="KasaAylikToplam" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KasaToplam">
+          <Key>
+            <PropertyRef Name="KasaToplamID" />
+          </Key>
+          <Property Name="KasaToplamID" Type="Int64" Nullable="false" />
+          <Property Name="Tarih" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Ciro" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Kar" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="GunIciToplam" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Musteriler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="MusteriAdi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MusteriBakiyesi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Urunler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="BarkodNo" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UrunAdi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UrunFiyati" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UrunGelisFiyati" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UrunSatisFiyati" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="VeriEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KasaAylik" EntityType="Self.KasaAylik" />
+          <EntitySet Name="KasaToplam" EntityType="Self.KasaToplam" />
+          <EntitySet Name="Musteriler" EntityType="Self.Musteriler" />
+          <EntitySet Name="Urunler" EntityType="Self.Urunler" />
+          <EntitySet Name="GiderlerSet" EntityType="VeriModel.Giderler" />
+        </EntityContainer>
+        <EntityType Name="Giderler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GiderAdi" Type="String" Nullable="false" />
+          <Property Name="GiderTarihi" Type="DateTime" Nullable="false" />
+          <Property Name="GiderTutari" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VeriModelStoreContainer" CdmEntityContainer="VeriEntities2">
+          <EntitySetMapping Name="KasaAylik">
+            <EntityTypeMapping TypeName="VeriModel.KasaAylik">
+              <MappingFragment StoreEntitySet="KasaAylik">
+                <ScalarProperty Name="KasaAylikID" ColumnName="KasaAylikID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="KasaAylikToplam" ColumnName="KasaAylikToplam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KasaToplam">
+            <EntityTypeMapping TypeName="VeriModel.KasaToplam">
+              <MappingFragment StoreEntitySet="KasaToplam">
+                <ScalarProperty Name="KasaToplamID" ColumnName="KasaToplamID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Ciro" ColumnName="Ciro" />
+                <ScalarProperty Name="Kar" ColumnName="Kar" />
+                <ScalarProperty Name="GunIciToplam" ColumnName="GunIciToplam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Musteriler">
+            <EntityTypeMapping TypeName="VeriModel.Musteriler">
+              <MappingFragment StoreEntitySet="Musteriler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MusteriAdi" ColumnName="MusteriAdi" />
+                <ScalarProperty Name="MusteriBakiyesi" ColumnName="MusteriBakiyesi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Urunler">
+            <EntityTypeMapping TypeName="VeriModel.Urunler">
+              <MappingFragment StoreEntitySet="Urunler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BarkodNo" ColumnName="BarkodNo" />
+                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+                <ScalarProperty Name="UrunFiyati" ColumnName="UrunFiyati" />
+                <ScalarProperty Name="UrunGelisFiyati" ColumnName="UrunGelisFiyati" />
+                <ScalarProperty Name="UrunSatisFiyati" ColumnName="UrunSatisFiyati" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

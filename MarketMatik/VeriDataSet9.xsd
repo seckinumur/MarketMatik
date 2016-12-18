@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VeriDataSet9" targetNamespace="http://tempuri.org/VeriDataSet9.xsd" xmlns:mstns="http://tempuri.org/VeriDataSet9.xsd" xmlns="http://tempuri.org/VeriDataSet9.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VeriConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VeriConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MarketMatik.Properties.Settings.GlobalReference.Default.VeriConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KasaGunlukToplamTableAdapter" GeneratorDataComponentClassName="KasaGunlukToplamTableAdapter" Name="KasaGunlukToplam" UserDataComponentName="KasaGunlukToplamTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="VeriConnectionString (Settings)" DbObjectName="main.KasaGunlukToplam" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Tarih], [Ciro], [Kar], [Giderler] FROM [KasaGunlukToplam]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Tarih" DataSetColumn="Tarih" />
+              <Mapping SourceColumn="Ciro" DataSetColumn="Ciro" />
+              <Mapping SourceColumn="Kar" DataSetColumn="Kar" />
+              <Mapping SourceColumn="Giderler" DataSetColumn="Giderler" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VeriDataSet9" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VeriDataSet9" msprop:Generator_UserDSName="VeriDataSet9">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KasaGunlukToplam" msprop:Generator_TableClassName="KasaGunlukToplamDataTable" msprop:Generator_TableVarName="tableKasaGunlukToplam" msprop:Generator_TablePropName="KasaGunlukToplam" msprop:Generator_RowDeletingName="KasaGunlukToplamRowDeleting" msprop:Generator_RowChangingName="KasaGunlukToplamRowChanging" msprop:Generator_RowEvHandlerName="KasaGunlukToplamRowChangeEventHandler" msprop:Generator_RowDeletedName="KasaGunlukToplamRowDeleted" msprop:Generator_UserTableName="KasaGunlukToplam" msprop:Generator_RowChangedName="KasaGunlukToplamRowChanged" msprop:Generator_RowEvArgName="KasaGunlukToplamRowChangeEvent" msprop:Generator_RowClassName="KasaGunlukToplamRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tarih" msprop:Generator_ColumnVarNameInTable="columnTarih" msprop:Generator_ColumnPropNameInRow="Tarih" msprop:Generator_ColumnPropNameInTable="TarihColumn" msprop:Generator_UserColumnName="Tarih" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ciro" msprop:Generator_ColumnVarNameInTable="columnCiro" msprop:Generator_ColumnPropNameInRow="Ciro" msprop:Generator_ColumnPropNameInTable="CiroColumn" msprop:Generator_UserColumnName="Ciro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kar" msprop:Generator_ColumnVarNameInTable="columnKar" msprop:Generator_ColumnPropNameInRow="Kar" msprop:Generator_ColumnPropNameInTable="KarColumn" msprop:Generator_UserColumnName="Kar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Giderler" msprop:Generator_ColumnVarNameInTable="columnGiderler" msprop:Generator_ColumnPropNameInRow="Giderler" msprop:Generator_ColumnPropNameInTable="GiderlerColumn" msprop:Generator_UserColumnName="Giderler" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
